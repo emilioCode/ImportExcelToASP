@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Import", "Product", FormMethod.Post, new { enctype="multipart/form-data"}))
+    {
+        @Html.Raw(ViewBag.Error)
+        <span>Excel File </span><input type="file" name="excelFile"/>
+        <br />
+        <input type="submit" value="Import"/>
+    }
+</body>
+</html>
